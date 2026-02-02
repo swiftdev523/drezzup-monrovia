@@ -19,21 +19,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-linear-to-b from-gray-900 to-black text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-linear-to-b from-gray-900 to-black text-white py-20">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           <div className="lg:col-span-2">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <h3 className="text-3xl md:text-4xl font-extrabold mb-6 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent">
               {SITE_CONFIG.name.toLowerCase()}.
             </h3>
-            <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed max-w-md">
+            <p className="text-gray-400 mb-8 text-base md:text-lg leading-relaxed max-w-md">
               {SITE_CONFIG.tagline}
             </p>
             <a
               href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:gap-4 hover:shadow-lg hover:shadow-green-500/50 group">
+              className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:gap-4 hover:shadow-lg hover:shadow-green-500/50 group">
               <MessageCircle
                 size={20}
                 className="group-hover:rotate-12 transition-transform"

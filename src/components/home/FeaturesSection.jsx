@@ -25,14 +25,14 @@ const features = [
 ];
 
 const FeaturesSection = () => (
-  <Section className="bg-linear-to-b from-gray-50 to-white">
+  <Section className="bg-gray-50">
     <div className="text-center mb-16">
       <SectionTitle>Why Choose Us?</SectionTitle>
-      <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto mt-4">
+      <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mt-4 leading-relaxed">
         Your trusted destination for authentic fashion and exceptional service
       </p>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
       {features.map((f, i) => (
         <div
           key={i}

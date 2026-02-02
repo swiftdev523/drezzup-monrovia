@@ -15,25 +15,24 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+    <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl md:text-2xl font-bold tracking-tight hover:opacity-80 transition-all hover:scale-105 duration-300">
+            className="text-xl lg:text-2xl font-extrabold tracking-tight hover:opacity-80 transition-opacity duration-300">
             {SITE_CONFIG.name}
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 to={link.path}
-                className="text-sm font-medium text-gray-700 hover:text-black transition-all relative group">
+                className="text-base font-medium text-gray-900 hover:text-gray-600 transition-colors duration-200">
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </nav>

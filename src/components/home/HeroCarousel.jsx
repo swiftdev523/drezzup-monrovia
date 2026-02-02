@@ -21,7 +21,7 @@ const HeroCarousel = () => {
     );
 
   return (
-    <section className="relative h-125 md:h-150 lg:h-175 bg-gray-900 overflow-hidden">
+    <section className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-gray-900 overflow-hidden">
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => (
         <div
@@ -42,15 +42,15 @@ const HeroCarousel = () => {
 
           {/* Content */}
           <div className="relative h-full flex items-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <div className="max-w-2xl text-white">
-                <p className="text-xs md:text-sm font-semibold tracking-[0.3em] mb-4 uppercase text-gray-300 animate-slide-in">
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
+              <div className="max-w-3xl text-white">
+                <p className="text-sm font-semibold tracking-[0.2em] mb-3 uppercase text-gray-300 animate-slide-in">
                   {slide.brand}
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight animate-fade-in">
                   {slide.title}
                 </h1>
-                <p className="text-base md:text-xl mb-8 text-gray-200 max-w-xl animate-slide-in">
+                <p className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl leading-relaxed animate-slide-in">
                   {slide.description}
                 </p>
                 <a

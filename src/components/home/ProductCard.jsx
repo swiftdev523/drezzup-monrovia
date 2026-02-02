@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Card
-      className="overflow-hidden group cursor-pointer hover:shadow-xl transition-all duration-300 relative"
+      className="overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-300 relative rounded-2xl bg-white"
       onClick={() => navigate(`/product/${product.id}`)}>
       <div className="absolute top-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <button
@@ -27,14 +27,14 @@ const ProductCard = ({ product }) => {
         />
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
       </div>
-      <div className="p-4 md:p-5">
-        <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+      <div className="p-5 md:p-6">
+        <p className="text-xs uppercase tracking-wider text-gray-500 mb-2">
           {product.category}
         </p>
-        <h3 className="font-semibold text-base md:text-lg mb-2 line-clamp-2 min-h-12 group-hover:text-gray-700 transition-colors">
+        <h3 className="font-semibold text-base md:text-lg mb-3 line-clamp-2 min-h-12 group-hover:text-gray-700 transition-colors leading-snug">
           {product.name}
         </h3>
-        <p className="text-xl md:text-2xl font-bold mb-4 bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+        <p className="text-xl md:text-2xl font-extrabold mb-4 text-gray-900">
           GHS {product.price.toFixed(2)}
         </p>
         <Button

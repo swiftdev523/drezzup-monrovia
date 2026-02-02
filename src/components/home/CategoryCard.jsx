@@ -3,7 +3,7 @@ import Card from "../ui/Card";
 
 const CategoryCard = ({ category }) => (
   <a href={`#category-${category.id}`} className="group block">
-    <Card className="relative overflow-hidden aspect-square hover:shadow-2xl transition-all duration-500">
+    <Card className="relative overflow-hidden aspect-square hover:shadow-2xl transition-all duration-500 rounded-2xl">
       <img
         src={category.image}
         alt={category.name}
@@ -15,8 +15,8 @@ const CategoryCard = ({ category }) => (
           <ArrowRight size={24} className="text-white" />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 flex items-end justify-between">
-        <h3 className="text-white text-lg md:text-2xl font-bold uppercase tracking-wider group-hover:tracking-widest transition-all duration-300">
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between">
+        <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-extrabold uppercase tracking-wide group-hover:tracking-wider transition-all duration-300">
           {category.name}
         </h3>
       </div>

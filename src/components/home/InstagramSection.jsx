@@ -13,10 +13,10 @@ const images = [
 ];
 
 const InstagramSection = () => (
-  <Section className="bg-linear-to-b from-gray-50 to-white">
-    <div className="text-center mb-12">
+  <Section className="bg-white">
+    <div className="text-center mb-16">
       <SectionTitle>Behind the Scenes</SectionTitle>
-      <p className="text-gray-600 mb-6 mt-4">
+      <p className="text-gray-600 text-lg mb-8 mt-4">
         Follow us on Instagram for daily inspiration
       </p>
       <a
@@ -29,14 +29,14 @@ const InstagramSection = () => (
         </Button>
       </a>
     </div>
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
       {images.map((img, i) => (
         <a
           key={i}
           href={SITE_CONFIG.contact.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative aspect-square overflow-hidden rounded-xl group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300">
+          className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer shadow-md hover:shadow-2xl transition-all duration-300">
           <img
             src={img}
             alt={`Instagram ${i + 1}`}
