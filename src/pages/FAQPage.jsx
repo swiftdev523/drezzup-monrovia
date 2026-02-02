@@ -77,7 +77,7 @@ const FAQPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-linear-to-br from-black via-gray-900 to-black text-white py-20 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -142,7 +142,7 @@ const FAQPage = () => {
       </Section>
 
       {/* FAQ */}
-      <Section className="bg-linear-to-b from-gray-50 to-white py-16">
+      <Section className="bg-gradient-to-b from-gray-50 to-white py-16">
         <SectionTitle>Frequently Asked Questions</SectionTitle>
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100 animate-fade-in">
           {faqs.map((faq, index) => (
@@ -158,7 +158,7 @@ const FAQPage = () => {
 
       {/* Contact CTA */}
       <Section className="py-16">
-        <div className="bg-linear-to-br from-black via-gray-900 to-black text-white rounded-3xl p-12 md:p-16 text-center shadow-2xl animate-scale-in">
+        <div className="bg-gradient-to-br from-black via-gray-900 to-black text-white rounded-3xl p-12 md:p-16 text-center shadow-2xl animate-scale-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Still Have Questions?
           </h2>

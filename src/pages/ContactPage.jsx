@@ -25,7 +25,7 @@ const ContactPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-linear-to-br from-black via-gray-900 to-black text-white py-20 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />

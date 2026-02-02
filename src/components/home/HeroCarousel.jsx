@@ -21,7 +21,7 @@ const HeroCarousel = () => {
     );
 
   return (
-    <section className="relative h-[500px] md:h-[600px] lg:h-[700px] bg-gray-900 overflow-hidden">
+    <section className="relative h-125 md:h-150 lg:h-175 bg-gray-900 overflow-hidden">
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => (
         <div
@@ -38,11 +38,11 @@ const HeroCarousel = () => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
           {/* Content */}
           <div className="relative h-full flex items-center">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
+            <div className="max-w-350 mx-auto px-6 lg:px-12 w-full">
               <div className="max-w-3xl text-white">
                 <p className="text-sm font-semibold tracking-[0.2em] mb-3 uppercase text-gray-300 animate-slide-in">
                   {slide.brand}

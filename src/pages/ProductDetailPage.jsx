@@ -70,7 +70,7 @@ const ProductDetailPage = () => {
             <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
               {product.name}
             </h1>
-            <p className="text-4xl md:text-5xl font-bold bg-linear-to-r from-black to-gray-700 bg-clip-text text-transparent mb-6">
+            <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent mb-6">
               GHS {product.price.toFixed(2)}
             </p>
           </div>

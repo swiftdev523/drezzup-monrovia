@@ -19,11 +19,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-linear-to-b from-gray-900 to-black text-white py-20">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-20">
+      <div className="max-w-350 mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           <div className="lg:col-span-2">
-            <h3 className="text-3xl md:text-4xl font-extrabold mb-6 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent">
+            <h3 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               {SITE_CONFIG.name.toLowerCase()}.
             </h3>
             <p className="text-gray-400 mb-8 text-base md:text-lg leading-relaxed max-w-md">

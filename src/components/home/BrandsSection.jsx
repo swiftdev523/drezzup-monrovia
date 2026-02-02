@@ -16,7 +16,7 @@ const BrandsSection = ({ brands }) => (
           href={`#brand-${brand.id}`}
           className="animate-scale-in"
           style={{ animationDelay: `${index * 100}ms` }}>
-          <Card className="p-10 md:p-16 flex items-center justify-center min-h-[150px] md:min-h-[180px] group hover:shadow-2xl transition-all duration-300 bg-white rounded-2xl">
+          <Card className="p-10 md:p-16 flex items-center justify-center min-h-37.5 md:min-h-45 group hover:shadow-2xl transition-all duration-300 bg-white rounded-2xl">
             <img
               src={brand.logo}
               alt={brand.name}

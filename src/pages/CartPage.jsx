@@ -133,7 +133,7 @@ const CartPage = () => {
 
         {/* Order Summary */}
         <div className="lg:col-span-1">
-          <div className="bg-linear-to-br from-gray-900 to-black text-white p-8 rounded-2xl shadow-2xl sticky top-24 animate-scale-in">
+          <div className="bg-gradient-to-br from-gray-900 to-black text-white p-8 rounded-2xl shadow-2xl sticky top-24 animate-scale-in">
             <h3 className="text-2xl font-bold mb-6">Order Summary</h3>
             <div className="space-y-4 mb-6">
               <div className="flex justify-between text-lg">

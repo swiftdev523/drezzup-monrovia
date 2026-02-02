@@ -22,7 +22,7 @@ const AboutPage = () => {
               "url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=400&fit=crop)",
           }}
         />
-        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white px-4 animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -54,7 +54,7 @@ const AboutPage = () => {
       </Section>
 
       {/* Stats Section */}
-      <Section className="bg-linear-to-br from-black via-gray-900 to-black text-white py-20">
+      <Section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
           <div className="text-center animate-scale-in">
             <div className="bg-white/10 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -85,11 +85,11 @@ const AboutPage = () => {
       </Section>
 
       {/* Values */}
-      <Section className="bg-linear-to-b from-gray-50 to-white py-20">
+      <Section className="bg-gradient-to-b from-gray-50 to-white py-20">
         <SectionTitle>Our Values</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="text-center p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in">
-            <div className="w-20 h-20 bg-linear-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span className="text-white text-3xl font-bold">1</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Authenticity</h3>
@@ -101,7 +101,7 @@ const AboutPage = () => {
           <div
             className="text-center p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
             style={{ animationDelay: "100ms" }}>
-            <div className="w-20 h-20 bg-linear-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span className="text-white text-3xl font-bold">2</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Quality Service</h3>
@@ -113,7 +113,7 @@ const AboutPage = () => {
           <div
             className="text-center p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
             style={{ animationDelay: "200ms" }}>
-            <div className="w-20 h-20 bg-linear-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span className="text-white text-3xl font-bold">3</span>
             </div>
             <h3 className="text-2xl font-bold mb-4">Fast Delivery</h3>

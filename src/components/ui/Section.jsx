@@ -1,6 +1,6 @@
 const Section = ({ children, className = "", id = "" }) => (
   <section id={id} className={`py-16 md:py-20 lg:py-24 ${className}`}>
-    <div className="max-w-[1400px] mx-auto px-6 lg:px-12">{children}</div>
+    <div className="max-w-350 mx-auto px-6 lg:px-12">{children}</div>
   </section>
 );
 

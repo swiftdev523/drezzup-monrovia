@@ -22,7 +22,7 @@ const Button = ({
       {...props}>
       <span className="relative z-10 flex items-center gap-2">{children}</span>
       {variant === "primary" && (
-        <span className="absolute inset-0 bg-linear-to-r from-gray-800 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <span className="absolute inset-0 bg-gradient-to-r from-gray-800 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
     </button>
   );
