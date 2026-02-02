@@ -99,7 +99,6 @@ const Footer = () => {
           <p className="text-gray-400 text-sm text-center md:text-left">
             ©2026 {SITE_CONFIG.name.toLowerCase()}. All rights reserved.
           </p>
-          <p className="text-gray-500 text-xs">Designed with ❤️ in Ghana</p>
         </div>
       </div>
     </footer>

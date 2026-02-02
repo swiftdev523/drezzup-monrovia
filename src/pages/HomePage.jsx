@@ -11,9 +11,7 @@ const HomePage = () => (
     <HeroCarousel />
     <CategoriesSection categories={categories} />
     <ProductsSection title="New Releases" products={newReleases} />
-    <div className="bg-white">
-      <ProductsSection title="Best Sellers" products={bestSellers} />
-    </div>
+    <ProductsSection title="Best Sellers" products={bestSellers} />
     <BrandsSection brands={brands} />
     <FeaturesSection />
     <InstagramSection />

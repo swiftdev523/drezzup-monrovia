@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { HERO_SLIDES } from "../../config/constants";
 
@@ -21,7 +22,7 @@ const HeroCarousel = () => {
     );
 
   return (
-    <section className="relative h-125 md:h-150 lg:h-175 bg-gray-900 overflow-hidden">
+    <section className="relative h-[60vh] bg-gray-900 overflow-hidden">
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => (
         <div
@@ -41,26 +42,28 @@ const HeroCarousel = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
 
           {/* Content */}
-          <div className="relative h-full flex items-center">
+          <div className="relative h-full flex items-center justify-center">
             <div className="max-w-350 mx-auto px-6 lg:px-12 w-full">
-              <div className="max-w-3xl text-white">
-                <p className="text-sm font-semibold tracking-[0.2em] mb-3 uppercase text-gray-300 animate-slide-in">
+              <div className="max-w-3xl text-white text-center mx-auto">
+                <p className="text-xs font-medium tracking-[0.15em] mb-2 uppercase text-gray-300 animate-slide-in">
                   {slide.brand}
                 </p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight animate-fade-in">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight animate-fade-in">
                   {slide.title}
                 </h1>
-                <p className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl leading-relaxed animate-slide-in">
+                <p className="text-base md:text-lg mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed animate-slide-in">
                   {slide.description}
                 </p>
-                <a
-                  href={slide.ctaLink}
-                  className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-sm md:text-base hover:bg-gray-100 transition-all duration-300 hover:gap-5 hover:shadow-2xl group animate-scale-in">
-                  {slide.cta}
-                  <span className="text-xl group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </a>
+                <div className="flex justify-center">
+                  <Link
+                    to="/shop"
+                    className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:gap-3 hover:shadow-xl group animate-scale-in">
+                    {slide.cta}
+                    <span className="text-xl group-hover:translate-x-1 transition-transform">
+                      →
+                    </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

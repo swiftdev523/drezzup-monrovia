@@ -9,42 +9,38 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { label: "Shop", path: "/shop" },
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
-    { label: "FAQ", path: "/faq" },
+    { label: "Bags", path: "/shop?category=bags" },
+    { label: "Birkenstocks", path: "/shop?category=birkenstocks" },
+    { label: "COMBOS", path: "/shop?category=combos" },
+    { label: "More", path: "#", hasDropdown: true },
   ];
 
   return (
-    <header className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-350 mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl lg:text-2xl font-black tracking-tight hover:tracking-wide transition-all duration-300 relative group">
-            <span className="relative z-10">{SITE_CONFIG.name}</span>
-            <span className="absolute inset-0 bg-gray-100 scale-0 group-hover:scale-100 rounded-lg transition-transform duration-300 -z-10" />
+            className="text-base font-bold tracking-tight hover:opacity-80 transition-opacity duration-300">
+            {SITE_CONFIG.name}
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-12 absolute left-1/2 -translate-x-1/2">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path ||
+                location.search.includes(link.path.split("?")[1] || "");
               return (
                 <Link
                   key={link.label}
                   to={link.path}
-                  className={`relative text-sm lg:text-base font-semibold tracking-wide transition-all duration-300 py-2 group ${
-                    isActive ? "text-black" : "text-gray-600 hover:text-black"
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-black ${
+                    isActive ? "text-black" : "text-gray-700"
                   }`}>
                   {link.label}
-                  {/* Animated underline */}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-black transition-all duration-300 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  />
+                  {link.hasDropdown && <span className="ml-1">▼</span>}
                 </Link>
               );
             })}
@@ -64,20 +60,20 @@ const Header = () => {
             ) : (
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2.5 hover:bg-gray-100 rounded-full transition-all hover:scale-110 duration-300 active:scale-95">
-                <Search size={20} />
+                className="flex items-center gap-2 p-2 hover:bg-gray-100 rounded-lg transition-all active:scale-95">
+                <Search size={18} />
+                <span className="hidden md:inline text-sm font-medium text-gray-700">
+                  Search
+                </span>
               </button>
             )}
 
             {/* Cart */}
             <Link
               to="/cart"
-              className="relative p-2.5 hover:bg-gray-100 rounded-full transition-all hover:scale-110 duration-300 group active:scale-95">
-              <ShoppingCart
-                size={20}
-                className="group-hover:rotate-12 transition-transform duration-300"
-              />
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-lg animate-pulse">
+              className="relative p-2 hover:bg-gray-100 rounded-lg transition-all group">
+              <ShoppingCart size={20} />
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
                 0
               </span>
             </Link>
