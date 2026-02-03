@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { Section } from "../ui/Section";
 import ProductCard from "./ProductCard";
 import ProductModal from "../ui/ProductModal";
+import { newReleases, bestSellers } from "../../data/products";
 
 const ProductsSection = ({ title, products }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const allProducts = [...newReleases, ...bestSellers];
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -34,6 +37,7 @@ const ProductsSection = ({ title, products }) => {
         product={selectedProduct}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        allProducts={allProducts}
       />
     </Section>
   );

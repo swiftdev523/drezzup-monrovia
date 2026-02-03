@@ -22,7 +22,7 @@ const HeroCarousel = () => {
     );
 
   return (
-    <section className="relative h-[60vh] bg-gray-900 overflow-hidden">
+    <section className="relative h-[50vh] sm:h-[60vh] bg-gray-900 overflow-hidden">
       {/* Slides */}
       {HERO_SLIDES.map((slide, index) => (
         <div
@@ -43,21 +43,21 @@ const HeroCarousel = () => {
 
           {/* Content */}
           <div className="relative h-full flex items-center justify-center">
-            <div className="max-w-350 mx-auto px-6 lg:px-12 w-full">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 lg:px-12 w-full">
               <div className="max-w-3xl text-white text-center mx-auto">
-                <p className="text-xs font-medium tracking-[0.15em] mb-2 uppercase text-gray-300 animate-slide-in">
+                <p className="text-[10px] sm:text-xs font-medium tracking-[0.15em] mb-2 uppercase text-gray-300 animate-slide-in">
                   {slide.brand}
                 </p>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight animate-fade-in">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight animate-fade-in">
                   {slide.title}
                 </h1>
-                <p className="text-base md:text-lg mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed animate-slide-in">
+                <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed animate-slide-in">
                   {slide.description}
                 </p>
                 <div className="flex justify-center">
                   <Link
                     to="/shop"
-                    className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 hover:gap-3 hover:shadow-xl group animate-scale-in">
+                    className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md text-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-xs sm:text-sm hover:bg-white transition-all duration-300 hover:gap-3 hover:shadow-2xl group animate-scale-in border border-white/60 active:scale-95">
                     {slide.cta}
                     <span className="text-xl group-hover:translate-x-1 transition-transform">
                       →
@@ -73,25 +73,25 @@ const HeroCarousel = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-black p-3 md:p-4 rounded-full transition-all duration-300 z-10 hover:scale-110 shadow-xl">
-        <ChevronLeft size={24} />
+        className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/60 backdrop-blur-xl hover:bg-white/80 text-black p-2 sm:p-3 md:p-4 rounded-full transition-all duration-300 z-10 hover:scale-110 active:scale-95 shadow-2xl border border-white/40">
+        <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-sm hover:bg-white text-black p-3 md:p-4 rounded-full transition-all duration-300 z-10 hover:scale-110 shadow-xl">
-        <ChevronRight size={24} />
+        className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/60 backdrop-blur-xl hover:bg-white/80 text-black p-2 sm:p-3 md:p-4 rounded-full transition-all duration-300 z-10 hover:scale-110 active:scale-95 shadow-2xl border border-white/40">
+        <ChevronRight size={20} className="sm:w-6 sm:h-6" />
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+      <div className="absolute bottom-6 sm:bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-10">
         {HERO_SLIDES.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? "bg-white w-12"
-                : "bg-white/50 w-2 hover:bg-white/75"
+                ? "bg-white w-8 sm:w-12"
+                : "bg-white/50 w-1.5 sm:w-2 hover:bg-white/75"
             }`}
           />
         ))}

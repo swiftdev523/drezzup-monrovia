@@ -12,8 +12,8 @@ const CategoryCard = ({ category }) => (
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent group-hover:from-black/90 group-hover:via-black/60 transition-all duration-500" />
 
-      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between">
-        <h3 className="text-white text-l md:text-xl lg:text-2xl font-normal uppercase tracking-wide group-hover:tracking-wider transition-all duration-300">
+      <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 flex items-end justify-between">
+        <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal uppercase tracking-wide group-hover:tracking-wider transition-all duration-300">
           {category.name}
         </h3>
       </div>
